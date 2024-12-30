@@ -1,0 +1,400 @@
+*, *:after, *:before {
+	box-sizing: border-box;
+	margin: 0;
+    padding: 0;
+    transition: all 100ms ease-in;
+}
+body {
+	background: #1e3c72;
+	color: #ccc;
+	position: relative;
+    overflow: hidden;
+    height: 100vh;
+}
+
+#decoration{
+	float: right;
+}
+#decoration2 {
+	float: left;
+}
+
+article {
+	font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+	margin: 20px;
+}
+
+#santa {
+	float: right;
+	clear: both;
+	margin-top: 20px;
+	margin-right: 20px;
+}
+#child {
+	float: right;
+	margin-top: 120px;
+}
+
+.snowflakes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allow click-through */
+}
+
+.snowflake {
+    position: absolute;
+    top: -10%;
+    color: white;
+    font-size: 22px;
+    user-select: none;
+    animation: fall 12s linear infinite;
+}
+
+.snowflake:nth-of-type(1) { left: 10%; animation-delay: 1s; }
+.snowflake:nth-of-type(2) { left: 30%; animation-delay: 2s; }
+.snowflake:nth-of-type(3) { left: 50%; animation-delay: 4s; }
+.snowflake:nth-of-type(4) { left: 70%; animation-delay: 6s; }
+.snowflake:nth-of-type(5) { left: 90%; animation-delay: 8s; }
+.snowflake:nth-of-type(6) { left: 42%; animation-delay: 9s; }
+
+@keyframes fall {
+    0% { top: -10%; opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { top: 110%; opacity: 0; }
+}
+
+.snowflake2 {
+	top: -20%;
+	position: absolute;
+    top: 0;
+    color: white;
+    font-size: 15px;
+    animation: fallIce 17s linear infinite;
+    left: 20%;
+}
+
+.snowflake3 {
+	top: -20%;
+	position: absolute;
+	left: 35%; 
+	font-size: 15px; 
+	animation: fallIce 19s linear infinite;
+	color: white;
+}
+.snowflake4 {
+	top: -20%;
+	position: absolute;
+	left: 78%; 
+	font-size: 15px;
+	animation: fallIce 10s linear infinite;
+	color: white;
+}
+
+.snowflake5 {
+	top: -20%;
+	left: 60%;
+	font-size: 15px;
+	position: absolute;
+	animation: fallIce 12s linear infinite;
+	color: white;
+}
+
+@keyframes fallIce {
+    0% { top: 0; opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 2; }
+    100% { top: 120%; opacity: 0; }
+}
+
+
+/* ------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Pacifico&display=swap');
+
+.new-year {
+	width: 100%;
+	font-family: 'Pacifice', cursive;
+	font-size: 40px;
+	font-weight: 700;
+	top: 45%;
+	right: 18%;
+	text-align: center;
+	color: #ff66b3;
+	position: absolute;
+	opacity: 0;
+	animation: celebration 2s ease-in-out 7s forwards;
+}
+
+span.out {
+	position: absolute;
+	right: 61%;
+	top: 50%;
+	font-size: 43px;
+	animation: out_2024 5s ease-in-out 5s forwards;
+}
+
+span.in {
+	position: absolute;
+	right: 0%;
+	margin-top: 6.2%;
+	margin-right: -165px;
+	animation: in_2025 6s ease-in-out forwards;
+}
+
+span.in:before {
+	content: '';
+	width: 0px;
+	height: 6px;
+	display: block;
+	border-radius: 3px;
+	background: #7a8fe8;
+	transform: rotate(0deg);
+	transform-origin: left top;
+	position: absolute;
+	z-index: -1;
+	animation: in_left 1s ease-in-out 4s;
+}
+
+.left {
+	width: 100px;
+	height: 100px;
+	display: block;
+	background: #ffffb3;
+	border-radius: 50%;
+	position: absolute;
+	top: 60%;
+	margin-top: -165px;
+	animation: bulloon_left 10s ease-in-out forwards;
+}
+.left:before {
+	content: '';
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: transparent transparent #b19b32 transparent;
+	position: absolute;
+	left: 50%;
+	margin-left: -10px;
+	bottom: -10px;
+	z-index: -1;
+}
+.left:after {
+	content: '';
+	width: 3px;
+	height: 55px;
+	display: block;
+	background: #fff;
+	border-radius: 0px 0px 3px 3px;
+	position: absolute;
+	left: 50%;
+	margin-left: -2px;
+	bottom: -110;
+	top: 100%;
+}
+.start {
+	margin-top: 80px;
+	margin-left: 17px;
+}
+
+.animation {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	display: flex;
+	flex-direction: row;
+	overflow: hidden;
+	padding: 200px 100px 0 0;
+}
+.animation span {
+	font-family: 'Pacifice', serif;
+	font-size: 105px;
+	font-weight: 700;
+	color: #7a8fe8;
+}
+
+.fogos {
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+
+.fogos div {
+	border: 2px solid #fff;
+	position: absolute;
+	opacity: 0;
+	animation: new_fogos 1.5s ease-in-out 8s forwards;
+}
+
+.fogos div.f1 {
+	left: 20%;
+	top: 40%;
+}
+.fogos div.f2 {
+	left: 15%;
+	top: 70%;
+}
+.fogos div.f3 {
+	right: 20%;
+	top: 40%;
+}
+.fogos div.f4 {
+	right: 15%;
+	top: 70%;
+}
+
+.fogos div span {
+	width: 6px;
+	height: 6px;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	animation: div_fogos 0.5s ease-in-out 9s forwards;
+}
+.fogos div span:nth-child(1) {
+	transform: rotate(0deg);
+}
+.fogos div span:nth-child(2) {
+	transform: rotate(120deg);
+}
+.fogos div span:nth-child(3) {
+	transform: rotate(240deg);
+}
+
+.fogos div span:before {
+	content: '';
+	width: 2px;
+	height: 50px;
+	display: block;
+	background: #f5cc06;
+	position: absolute;
+	top: -60px;
+	left: 20px;
+}
+.fogos div span:after {
+	content: '';
+	width: 2px;
+	height: 50px;
+	display: block;
+	background: #f5cc06;
+	position: absolute;
+	top: -60px;
+	left: 2px;
+}
+
+.fogos div span i:before {
+	content: '';
+	width: 3px;
+	height: 3px;
+	display: block;
+	border-radius: 50%;
+	background: #fff;
+	position: absolute;
+	top: -15px;
+	left: 10px;
+}
+.fogos div span i:after {
+	content: '';
+	width: 3px;
+	height: 3px;
+	display: block;
+	border-radius: 50%;
+	background: #fff;
+	position: absolute;
+	top: -15px;
+	right: 10px;
+}
+
+@keyframes in_2025 {
+	0% {
+		right: 0%;
+	}
+	30% {
+		right: 52%;
+	}
+	40% {
+		right: 73%;
+		margin-right: -300px;
+	}
+	50% {
+		right: 74%;
+		margin-right: -240px;
+	}
+	100% {
+		right: 74%;
+	}
+}
+
+@keyframes bulloon_left {
+	0% {
+		right: 0%;
+	}
+	30% {
+		right: 64%;
+	}
+	40% {
+		right: 70%;
+		margin-right: -320px;
+	}
+	50% {
+		right: 78%;
+		margin-right: -240px;
+		top: 50%;
+	}
+	100% {
+		top: -100%;
+		right: 53%;
+	}
+}
+
+@keyframes in_left {
+	0% {
+		transform: rotate(-30deg);
+		width: 40px;
+	}
+	100% {
+		transform: rotate(-150deg);
+		width: 70px;
+	}
+}
+
+@keyframes out_2024 {
+	0% {
+		top: 50%;
+	}
+	100% {
+		top: -100%;
+	}
+}
+
+@keyframes celebration {
+	0% {
+		margin-top: 0px;
+		opacity: 0;
+	}
+	100% {
+		margin-top: -30px;
+		opacity: 1;
+	}
+}
+
+@keyframes div_fogos {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
